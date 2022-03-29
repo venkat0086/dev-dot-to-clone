@@ -1,6 +1,9 @@
 import dayjs from "dayjs";
 import { BiHeart } from "react-icons/bi";
 import { FaRegComment } from "react-icons/fa";
+import relativeTime from "dayjs/plugin/relativeTime";
+
+dayjs.extend(relativeTime);
 
 export const ArticleComponent = (props) => {
   const {
