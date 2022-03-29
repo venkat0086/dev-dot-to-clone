@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArticleComponent } from "./ArticleComponent";
 import { ArticleSkeleton } from "./ArticleSkeleton";
+import axios from "axios";
 
 export const Content = () => {
   const [articles, setArticles] = useState("");
@@ -8,9 +9,9 @@ export const Content = () => {
   useEffect(() => {
     const fetchData = () => {
       if (articles != null) {
-        fetch("https://dev.to/api/articles")
-          .then((res) => res.json())
-          .then((result) => setArticles([...articles, ...result]));
+        axios.get("https://dev.to/api/articles").then((res) => {
+          setArticles([...articles, ...res.data]);
+        });
       }
     };
 
@@ -42,11 +43,10 @@ export const Content = () => {
 
   useEffect(() => {
     setTimeout(async () => {
-      const res = await fetch("https://dev.to/api/articles");
-      const data = await res.json();
-
-      setArticles(data);
-      console.log(data);
+      axios.get("https://dev.to/api/articles").then((res) => {
+        console.log(res.data);
+        setArticles(res.data);
+      });
     }, 2000);
   }, []);
 
