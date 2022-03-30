@@ -1,9 +1,9 @@
+import { Router } from "./Components/Routes";
 import "./App.scss";
-import { Content } from "./Components/Content";
 function App() {
   return (
     <div className="App">
-      <Content />
+      <Router />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ArticleComponent } from "./ArticleComponent";
 import { ArticleSkeleton } from "./ArticleSkeleton";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export const Content = () => {
   const [articles, setArticles] = useState("");
@@ -55,11 +56,11 @@ export const Content = () => {
       <header>
         <h1>Posts</h1>
         <nav>
-          <a href="#">Feed</a>
-          <a href="#">Week</a>
-          <a href="#">Month</a>
-          <a href="#">Infinity</a>
-          <a href="#">Latest</a>
+          <Link to="/feed">Feed</Link>
+          <Link to="/feed">Week</Link>
+          <Link to="/feed">Month</Link>
+          <Link to="/feed">Infinity</Link>
+          <Link to="/feed">Latest</Link>
         </nav>
         <select id="dropdown-select" className="dropdown">
           <option value="Feed" defaultValue>
