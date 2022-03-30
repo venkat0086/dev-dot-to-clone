@@ -61,6 +61,16 @@ export const Content = () => {
           <a href="#">Infinity</a>
           <a href="#">Latest</a>
         </nav>
+        <select id="dropdown-select" className="dropdown">
+          <option value="Feed" defaultValue>
+            Feed
+          </option>
+
+          <option value="Week">Week</option>
+          <option value="Month">Month</option>
+          <option value="Year">Feed</option>
+          <option value="Infinity">Infinity</option>
+        </select>
       </header>
 
       <div className="articles">
