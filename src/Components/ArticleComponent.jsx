@@ -23,7 +23,7 @@ export const ArticleComponent = (props) => {
       {cover_image && (
         <a
           href={url}
-          className="article_image"
+          className="article__image"
           style={{ backgroundImage: `url(${cover_image})` }}
         >
           &nbsp;
