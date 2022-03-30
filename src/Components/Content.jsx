@@ -14,7 +14,8 @@ export const Content = () => {
           setArticles([...articles, ...res.data]);
         });
       }
-    };
+    };   
+    
 
     const handleScroll = () => {
       const html = document.documentElement;
