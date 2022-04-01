@@ -1,13 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import { Content } from "./Content";
 import { VideoSection } from "./Video";
-import { LeftSideBarNavbar } from "./LeftSideNavbar";
+import { Home } from "./Home";
 
 export const Router = () => {
   return (
     <Routes>
-      {/* <Route path="/" element={<Content />} /> */}
-      <Route path="/" element={<LeftSideBarNavbar />} />
+      <Route path="/" element={<Home />} />
       <Route path="/videos" element={<VideoSection />} />
     </Routes>
   );

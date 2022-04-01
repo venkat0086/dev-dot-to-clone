@@ -1,4 +1,4 @@
-import "../Styles/LeftSideNavbar.css";
+// import "../Styles/LeftSideNavbar.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -17,7 +17,7 @@ import {
 import { AiFillAudio } from "react-icons/ai";
 import { FaTags, FaDev } from "react-icons/fa";
 import { IoLogoTwitter, IoLogoFacebook, IoLogoGithub } from "react-icons/io";
-import { RiInstagramFill, RiTwitchLine } from "react-icons/ri";
+import { RiInstagramFill } from "react-icons/ri";
 import { CgShapeHexagon } from "react-icons/cg";
 
 const tags = [
@@ -50,7 +50,7 @@ export const LeftSideBarNavbar = () => {
       <nav className="leftBar__menu">
         <ul>
           <li>
-            <a href="/home">
+            <a href="/">
               <i>
                 <FcHome />
               </i>
@@ -176,22 +176,38 @@ export const LeftSideBarNavbar = () => {
       </nav>
 
       <div className={more ? "leftBar__social" : "leftBar__social hidden"}>
-        <a href="https://twitter.com/thepracticaldev" target={"_blank"}>
+        <a
+          href="https://twitter.com/thepracticaldev"
+          target={"_blank"}
+          rel="noreferrer"
+        >
           <i>
             <IoLogoTwitter />
           </i>
         </a>
-        <a href="https://www.facebook.com/thepracticaldev" target={"_blank"}>
+        <a
+          href="https://www.facebook.com/thepracticaldev"
+          target={"_blank"}
+          rel="noreferrer"
+        >
           <i>
             <IoLogoFacebook />
           </i>
         </a>
-        <a href="https://github.com/thepracticaldev" target={"_blank"}>
+        <a
+          href="https://github.com/thepracticaldev"
+          target={"_blank"}
+          rel="noreferrer"
+        >
           <i>
             <IoLogoGithub />
           </i>
         </a>
-        <a href="https://www.instagram.com/thepracticaldev/" target={"_blank"}>
+        <a
+          href="https://www.instagram.com/thepracticaldev/"
+          target={"_blank"}
+          rel="noreferrer"
+        >
           <i>
             <RiInstagramFill />
           </i>

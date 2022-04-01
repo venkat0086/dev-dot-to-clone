@@ -1,6 +1,6 @@
 import React from "react";
 import { FaDev } from "react-icons/fa";
-import "../Css/Navbar.css";
+import "../Styles/Navbar.css";
 import { RiNotification3Line } from "react-icons/ri";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
