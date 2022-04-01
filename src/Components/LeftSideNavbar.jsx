@@ -1,5 +1,6 @@
-import "../Styles/LeftSideBarNavbar"
+import "../Styles/LeftSideNavbar.css";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FcHome,
   FcReading,
@@ -38,189 +39,181 @@ const tags = [
   "ubuntu",
   "aws",
 ];
-export const  LeftSideBarNavbar = () =>{
-
-
+export const LeftSideBarNavbar = () => {
   const [more, setmore] = useState(false);
   const toggle = () => {
     setmore(!more);
-  }; 
+  };
 
-  return( 
+  return (
     <aside className="leftBar">
-        <nav className="leftBar__menu">
-          <ul>
+      <nav className="leftBar__menu">
+        <ul>
+          <li>
+            <a href="/home">
+              <i>
+                <FcHome />
+              </i>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/reading">
+              <i>
+                <FcReading />
+              </i>
+              Reading List
+            </a>
+          </li>
+          <li>
+            <a href="/list">
+              <i>
+                <FcTodoList />
+              </i>
+              list
+            </a>
+          </li>
+          <li>
+            <a href="/podcast">
+              <i>
+                <AiFillAudio />
+              </i>
+              Podcasts
+            </a>
+          </li>
+          <li>
+            <Link to="/videos">
+              <i>
+                <FcVideoCall />
+              </i>
+              Videos
+            </Link>
+          </li>
+
+          <li>
+            <a href="/tags">
+              <i>
+                <FaTags />
+              </i>
+              Tags
+            </a>
+          </li>
+
+          <li className={more ? "more hidden" : "more"}>
+            <a href="/#" onClick={toggle}>
+              More...
+            </a>
+          </li>
+
+          <div className={more ? "list" : "list hidden"}>
             <li>
-              <a href="/home">
+              <a href="/code">
                 <i>
-                  <FcHome />
+                  <FcAbout />
                 </i>
-                Home
+                Code of Conduct
               </a>
             </li>
             <li>
-              <a href="/reading">
+              <a href="/FAQ">
                 <i>
-                  <FcReading />
+                  <FcIdea />
                 </i>
-                Reading List
+                FAQ
               </a>
             </li>
             <li>
-              <a href="/list">
+              <a href="/DEV">
                 <i>
-                  <FcTodoList />
+                  <FcShop />
                 </i>
-                list
+                DEV Shop
               </a>
             </li>
             <li>
-              <a href="/podcast">
+              <a href="/sponsers">
                 <i>
-                  <AiFillAudio />
+                  <FcLike />
                 </i>
-                Podcasts
+                Sponsers
               </a>
             </li>
             <li>
-              <a href="/videos">
+              <a href="/about">
                 <i>
-                  <FcVideoCall />
+                  <FaDev />
                 </i>
-                Videos
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/privacy">
+                <i>
+                  <FcBriefcase />
+                </i>
+                Privacy Policy
               </a>
             </li>
 
             <li>
-              <a href="/tags">
+              <a href="/terms">
                 <i>
-                  <FaTags />
+                  <FcDisclaimer />
                 </i>
-                Tags
+                Terms of use
               </a>
             </li>
-
-            <li className={more ? "more hidden" : "more"}>
-              <a href="/#" onClick={toggle}>
-                More...
+            <li>
+              <a href="/contact">
+                <i>
+                  <FcBusinessContact />
+                </i>
+                Contact
               </a>
             </li>
+          </div>
+        </ul>
+      </nav>
 
-            <div className={more ? "list" : "list hidden"}>
-              <li>
-                <a href="/code">
-                  <i>
-                    <FcAbout />
-                  </i>
-                  Code of Conduct
-                </a>
+      <div className={more ? "leftBar__social" : "leftBar__social hidden"}>
+        <a href="https://twitter.com/thepracticaldev" target={"_blank"}>
+          <i>
+            <IoLogoTwitter />
+          </i>
+        </a>
+        <a href="https://www.facebook.com/thepracticaldev" target={"_blank"}>
+          <i>
+            <IoLogoFacebook />
+          </i>
+        </a>
+        <a href="https://github.com/thepracticaldev" target={"_blank"}>
+          <i>
+            <IoLogoGithub />
+          </i>
+        </a>
+        <a href="https://www.instagram.com/thepracticaldev/" target={"_blank"}>
+          <i>
+            <RiInstagramFill />
+          </i>
+        </a>
+      </div>
+      <nav className="leftBar__taglist">
+        <header>
+          <h3>My Tags</h3>
+          <i>
+            <CgShapeHexagon />
+          </i>
+        </header>
+        <ul>
+          {tags.map((tag, id) => {
+            return (
+              <li key={id}>
+                <a href="/#">#{tag}</a>
               </li>
-              <li>
-                <a href="/FAQ">
-                  <i>
-                    <FcIdea />
-                  </i>
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="/DEV">
-                  <i>
-                    <FcShop />
-                  </i>
-                  DEV Shop
-                </a>
-              </li>
-              <li>
-                <a href="/sponsers">
-                  <i>
-                    <FcLike />
-                  </i>
-                  Sponsers
-                </a>
-              </li>
-              <li>
-                <a href="/about">
-                  <i>
-                    <FaDev />
-                  </i>
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/privacy">
-                  <i>
-                    <FcBriefcase />
-                  </i>
-                  Privacy Policy
-                </a>
-              </li>
-
-              <li>
-                <a href="/terms">
-                  <i>
-                    <FcDisclaimer />
-                  </i>
-                  Terms of use
-                </a>
-              </li>
-              <li>
-                <a href="/contact">
-                  <i>
-                    <FcBusinessContact />
-                  </i>
-                  Contact
-                </a>
-              </li>
-            </div>
-          </ul>
-        </nav>
-
-        <div className={more ? "leftBar__social" : "leftBar__social hidden"}>
-          <a href="https://twitter.com/thepracticaldev" target={"_blank"}>
-            <i>
-              <IoLogoTwitter />
-            </i>
-          </a>
-          <a href="https://www.facebook.com/thepracticaldev" target={"_blank"}>
-            <i>
-              <IoLogoFacebook />
-            </i>
-          </a>
-          <a href="https://github.com/thepracticaldev" target={"_blank"}>
-            <i>
-              <IoLogoGithub />
-            </i>
-          </a>
-          <a href="https://www.instagram.com/thepracticaldev/" target={"_blank"}>
-            <i>
-              <RiInstagramFill />
-            </i>
-          </a>
-         
-        </div>
-        <nav className="leftBar__taglist">
-          <header>
-            <h3>My Tags</h3>
-            <i>
-              <CgShapeHexagon />
-            </i>
-          </header>
-          <ul>
-            {tags.map((tag, id) => {
-              return (
-                <li key={id}>
-                  <a href="/#">#{tag}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </aside>
-      
-
-      
-          
-  )}
-
-  
+            );
+          })}
+        </ul>
+      </nav>
+    </aside>
+  );
+};
