@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaDev } from "react-icons/fa";
 import { RiNotification3Line } from "react-icons/ri";
+import { AiOutlineUser } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
@@ -38,10 +39,13 @@ const Navigate = (props) => {
           <i>
             <RiNotification3Line />
           </i>
+          <i>
+            <AiOutlineUser />
+          </i>
 
-          <span onClick={toggle}>
+          {/* <span onClick={toggle}>
             <img src="https://picsum.photos/200" alt="Profile Pictrure" />
-          </span>
+          </span> */}
         </div>
       </div>
 

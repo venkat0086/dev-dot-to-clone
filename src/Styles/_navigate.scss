@@ -79,14 +79,16 @@
       margin-left: auto;
 
       button {
-        background-color: var(--main-theme);
-        color: var(--header-bg);
+        background-color: var(--header-bg);
+        color: var(--main-theme-darker);
+        border: 1px solid #1827ce;
         padding: 0.5rem 1rem;
         border-radius: 5px;
         margin-right: 0.5rem;
 
         &:hover {
           background-color: var(--main-theme-darker);
+          color: var(--header-bg);
         }
       }
 
