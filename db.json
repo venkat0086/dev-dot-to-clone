@@ -1,0 +1,16 @@
+{
+  "login": [
+    {
+      "email": "venkat@gmail.com",
+      "password": "1234",
+      "id": 1
+    }
+  ],
+  "register": [
+    {
+      "email": "venkat@gmail.com",
+      "password": "1234",
+      "id": 1
+    }
+  ]
+}
