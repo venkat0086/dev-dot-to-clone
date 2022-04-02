@@ -165,12 +165,12 @@ export const LeftSideBarNavbar = (props) => {
                 </a>
               </li>
               <li>
-                <a href="/contact">
+                <Link to="/contact">
                   <i>
                     <FcBusinessContact />
                   </i>
                   Contact
-                </a>
+                </Link>
               </li>
             </div>
           </ul>

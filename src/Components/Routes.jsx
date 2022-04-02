@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { VideoSection } from "./Video";
+import {Contact } from "./Contact";
 import { Home } from "./Home";
 import Signup from "./Signup";
 import Login from "./Login";
@@ -11,6 +12,7 @@ export const Router = () => {
       <Route path="/videos" element={<VideoSection />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 };
