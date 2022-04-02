@@ -140,12 +140,12 @@ export const LeftSideBarNavbar = (props) => {
                 </a>
               </li>
               <li>
-                <a href="/about">
+                <Link to="/about">
                   <i>
                     <FaDev />
                   </i>
                   About
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/privacy">
