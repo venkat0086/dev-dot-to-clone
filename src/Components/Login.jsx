@@ -10,6 +10,7 @@ import axios from "axios";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "../Redux/action";
 import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -73,10 +74,20 @@ const Login = () => {
               <GrTwitter /> &nbsp; Continue with Twitter
             </button>
           </div>
+          {/* <p className="txt">
+            <span>-----</span> Have a password? Continue with your email address{" "}
+            <span>-----</span>
+          </p> */}
+
           <p className="txt">
-            <span>--------------</span> Have a password? Continue with your
-            email address <span>--------------</span>
+            <span>-----</span> Don't Have Accoount ?{" "}
+            <Link to={`/signup`} className="sign-to-login">
+              {" "}
+              Register here{" "}
+            </Link>
+            <span>-----</span>
           </p>
+
           <section className="credentials">
             <form onSubmit={onSubmit}>
               <p>Email</p>

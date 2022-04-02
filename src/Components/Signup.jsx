@@ -69,12 +69,12 @@ const Signup = () => {
             </button>
           </div>
           <p className="txt">
-            <span>--------------</span> Already Have an Accoount ?{" "}
+            <span>-----</span> Already Have an Accoount ?{" "}
             <Link to={`/login`} className="sign-to-login">
               {" "}
               Click Here{" "}
             </Link>
-            <span>--------------</span>
+            <span>-----</span>
           </p>
           <section className="credentials">
             <form onSubmit={onSubmit}>
