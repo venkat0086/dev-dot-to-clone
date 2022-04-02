@@ -28,18 +28,20 @@ const Login = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:2345/login", ldetails).then((res) => {
-      console.log(res.data);
-      if (res.data.message) {
-        alert(res.data.message);
-      } else {
-        alert("Logged in successfully");
-        const action = loginSuccess(res.data.token); // logoutsuccess("token")
-        // console.log("action:", action);
-        dispatch(action);
-        setLswtch(true);
-      }
-    });
+    axios
+      .post("https://dev-to-backend.herokuapp.com/login", ldetails)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.message) {
+          alert(res.data.message);
+        } else {
+          alert("Logged in successfully");
+          const action = loginSuccess(res.data.token); // logoutsuccess("token")
+          // console.log("action:", action);
+          dispatch(action);
+          setLswtch(true);
+        }
+      });
   };
 
   if (lswtch) {

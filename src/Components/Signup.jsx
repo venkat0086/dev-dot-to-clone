@@ -24,17 +24,19 @@ const Signup = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("http://localhost:2345/register", details).then((res) => {
-      console.log(res.data);
-      if (res.data.message) {
-        alert(res.data.message);
-      } else {
-        alert("Signed up successfully");
-        setSwtch(true);
-        // <Navigate to={'/Login'} />
-        // return navigate('/Login');
-      }
-    });
+    axios
+      .post("https://dev-to-backend.herokuapp.com/register", details)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.message) {
+          alert(res.data.message);
+        } else {
+          alert("Signed up successfully");
+          setSwtch(true);
+          // <Navigate to={'/Login'} />
+          // return navigate('/Login');
+        }
+      });
   };
 
   if (swtch) {
