@@ -3,14 +3,34 @@ import { FaDev } from "react-icons/fa";
 import { RiNotification3Line } from "react-icons/ri";
 import { AiOutlineUser } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { logoutSuccess } from '../Redux/action';
+import '../Styles/_navigate.scss';
 
-const Navigate = (props) => {
-  const [showMenu, setshowMenu] = useState(false);
+const Navigation = (props) => {
+  //const [showMenu, setshowMenu] = useState(false);
 
-  const toggle = () => {
-    setshowMenu(!showMenu);
-  };
+  const { token } = useSelector(
+    (state) => state,
+    shallowEqual
+); 
+//console.log(token);
+
+const [lobtn, setLobtn] = useState(false);
+
+const toggle = () => {
+  setLobtn(!lobtn);
+};
+
+const dispatch = useDispatch();
+
+    const logOut = () => { 
+        setLobtn(!lobtn);
+        const action = logoutSuccess("token");
+        dispatch(action);
+        return <Navigate to={'/'} />
+    }
 
   return (
     <header className="header">
@@ -31,17 +51,13 @@ const Navigate = (props) => {
 
         <div className="headerContainer__right">
           <Link to={`/Signup`}>
-            <button>Create account</button>
+            <button className="btn">{token? "Create Post" : "Create account"}</button>
           </Link>
           <i className="hidden-search">
             <FiSearch />
           </i>
-          <i>
-            <RiNotification3Line />
-          </i>
-          <i>
-            <AiOutlineUser />
-          </i>
+          <button className='i'><RiNotification3Line /></button>
+          { token ? <button className='i' onClick={ toggle }><AiOutlineUser /></button> : <Link to={`/Login`} ><button className='i'><AiOutlineUser /></button></Link> }
 
           {/* <span onClick={toggle}>
             <img src="https://picsum.photos/200" alt="Profile Pictrure" />
@@ -49,34 +65,11 @@ const Navigate = (props) => {
         </div>
       </div>
 
-      <div className={showMenu ? "dropdown-menu" : "dropdown-menu-close"}>
-        <ul>
-          <li onClick={toggle}>
-            <a href="/profile">
-              <div className="u-name">CodeBucks</div>
-              <small className="u-name-id">@codebucks</small>
-            </a>
-          </li>
-
-          <li onClick={toggle}>
-            <a href="/dashboard">Dashboard</a>
-          </li>
-          <li onClick={toggle}>
-            <a href="/post">Writing a Post</a>
-          </li>
-          <li onClick={toggle}>
-            <a href="/list">Reading list</a>
-          </li>
-          <li onClick={toggle}>
-            <a href="/settings">Settings</a>
-          </li>
-          <li onClick={toggle}>
-            <a href="/signout">Signout</a>
-          </li>
-        </ul>
-      </div>
+      <div className={lobtn ? "dropdown-btn" : "dropdown-btn-close"}>
+                <p onClick={ logOut }>Sign out</p>
+            </div>
     </header>
   );
 };
 
-export default Navigate;
+export default Navigation;
