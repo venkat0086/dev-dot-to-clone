@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import { VideoSection } from "./Video";
-import {About } from "./About";
+import { About } from "./About";
 import { Home } from "./Home";
 import Signup from "./Signup";
 import Login from "./Login";
-import {Contact} from "./Contact";
+import { Contact } from "./Contact";
 
 export const Router = () => {
   return (

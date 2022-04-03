@@ -47,11 +47,12 @@ const Navigation = (props) => {
         </div>
 
         <div className="headerContainer__right">
-          <Link to={`/signup`}>
+          <Link to={token ? `/login` : `/signup`}>
             <button className="btn">
               {token ? "Create Post" : "Create account"}
             </button>
           </Link>
+
           <i className="hidden-search">
             <FiSearch />
           </i>
@@ -59,11 +60,19 @@ const Navigation = (props) => {
             <RiNotification3Line />
           </button>
           {token ? (
-            <button className="i" onClick={toggle}>
+            <button className="i-btn" onClick={toggle}>
+              <img
+                className="i-img"
+                src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
+                alt="user"
+              />
+            </button>
+          ) : token ? (
+            <button className="i">
               <AiOutlineUser />
             </button>
           ) : (
-            <Link to={`/Login`}>
+            <Link to={`/login`}>
               <button className="i">
                 <AiOutlineUser />
               </button>
