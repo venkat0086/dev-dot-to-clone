@@ -56,11 +56,11 @@ export const Content = () => {
       <header>
         <h1>Posts</h1>
         <nav>
-          <Link to="/feed">Feed</Link>
-          <Link to="/week">Week</Link>
-          <Link to="/month">Month</Link>
-          <Link to="/infinity">Infinity</Link>
-          <Link to="/latest">Latest</Link>
+          <Link to="/">Feed</Link>
+          <Link to="/">Week</Link>
+          <Link to="/">Month</Link>
+          <Link to="/">Infinity</Link>
+          <Link to="/">Latest</Link>
         </nav>
         <select id="dropdown-select" className="dropdown">
           <option value="Feed" defaultValue>
@@ -68,6 +68,7 @@ export const Content = () => {
           </option>
 
           <option value="Week">Week</option>
+
           <option value="Month">Month</option>
           <option value="Year">Feed</option>
           <option value="Infinity">Infinity</option>
