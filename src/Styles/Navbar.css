@@ -1,0 +1,124 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+.header
+{
+    border: 1px solid gainsboro;
+    max-width: 100%;
+    display: flex;
+    padding: 1rem 4rem;
+    background-color: #fff;
+    height: 30px;
+}
+
+.h-container
+{
+    display: flex;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.logo
+{
+    color: black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.searchbox
+{
+    max-width: 420px;
+    display: flex;
+    flex: 1 auto;
+    margin-left: -1170px;
+    /* border: 1px solid red; */
+    align-items: center;
+}
+
+.form
+{
+    display: flex;
+}
+
+.s-input
+{
+    outline: 0;
+    background-color: #f9fafa;
+    padding: 0.6rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #b5bdc4;
+    width: 400px;
+}
+
+.s-input:focus
+{
+    background-color: #fff;
+    border: 2px solid #3b49df;
+}
+
+.s-icon
+{
+    font-size: 2rem;
+    border: 1px solid gainsboro;
+    width: 50px;
+    color: #fff;
+    background-color: #3b49df;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.h-options
+{
+    /* border: 1px solid blue; */
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.create
+{
+    background-color: #fff;
+    color: #3b49df;
+    border: 1px solid #3b49df;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.create:hover
+{
+    background-color: #3b49df;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.i
+{
+    margin: 0 0.5rem;
+    font-size: 1.6rem;
+    /* border: 1px solid gainsboro; */
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    color: #363d44;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.i:hover
+{
+    box-shadow: 10px solid black;
+    background-color: gainsboro;
+    color: #08090a;
+    z-index: 1;
+}
