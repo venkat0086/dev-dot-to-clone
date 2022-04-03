@@ -2,7 +2,7 @@ import { Content } from "./Content";
 import { useState } from "react";
 import { LeftSideBarNavbar } from "./LeftSideNavbar";
 import Navigation from "./Navigate";
-import { RightSidebar } from "./RightSideBar";
+import { RightSidebar } from "./RightSidebar";
 import "../App.scss";
 
 export const Home = () => {

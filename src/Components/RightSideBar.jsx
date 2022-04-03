@@ -1,6 +1,5 @@
 import React from "react";
-import {CardComponent} from "./CardComponent";
-
+import { CardComponent } from "./CardComponent";
 
 const listings = [
   {
@@ -90,10 +89,7 @@ export const RightSidebar = () => {
     <aside className="rightBar">
       <div className="rightBar__card-hackathon">
         <p>
-          <img
-            src="https://picsum.photos/200/300"
-            alt=""
-          />
+          <img src="https://picsum.photos/200/300" alt="" />
         </p>
         <h4>
           <a href="/#">Listen to the S8 Finale of DevDiscuss! 🎧</a>
@@ -113,8 +109,6 @@ export const RightSidebar = () => {
       <CardComponent tag="#news" articles={news} />
 
       <CardComponent tag="#help" articles={help} />
-
-
     </aside>
   );
 };
