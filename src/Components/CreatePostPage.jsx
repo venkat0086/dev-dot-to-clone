@@ -1,11 +1,20 @@
 import "../Styles/CreatePostPage.css";
+import Footer from "./Footer";
+import { useState } from "react";
 import Navigation from "./Navigate";
+import { Hamburger } from "./Hamburger";
 
 export const CreatePostPage = () => {
+  const [mobileMenu, setmobileMenu] = useState(false);
+
+  const toggle = () => {
+    setmobileMenu(!mobileMenu);
+  };
   return (
     <>
-      <Navigation />
+      <Navigation openMenu={toggle} />
       <div className="CreatePostPage_Body">
+        <Hamburger burgerMenu={mobileMenu} closeMenu={toggle} />
         <div className="CreatePostPage_MainDiv">
           <div className="CreatePostPage_MainDiv_FirstDiv">
             <div className="CreatePostPage_MainDiv_FirstDiv_1">
@@ -63,6 +72,7 @@ export const CreatePostPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
