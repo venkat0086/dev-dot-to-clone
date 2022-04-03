@@ -7,9 +7,12 @@ Project: make a clone of https://dev.to/ site
 
 ## Technology Stack Used
 
-- HTML
-- CSS
-- JavaScript
+- React
+- SCSS
+- Redux
+- NodeJS
+- Axios
+- DayJs
 
 For storing user data we also used LocalStorage.
 
