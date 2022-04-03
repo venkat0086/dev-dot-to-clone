@@ -1,14 +1,23 @@
 import React from "react";
-
+import { useState } from "react";
 import "../Styles/about.css";
 import Navigation from "./Navigate";
 import Footer from "./Footer";
+import { Hamburger } from "./Hamburger";
 
 export const About = () => {
+  const [mobileMenu, setmobileMenu] = useState(false);
+
+  const toggle = () => {
+    setmobileMenu(!mobileMenu);
+  };
+
   return (
     <>
-      <Navigation />
+      <Navigation openMenu={toggle} />
+
       <div className="about_main">
+        <Hamburger burgerMenu={mobileMenu} closeMenu={toggle} />
         <h1>About Dev</h1>
         <p>
           DEV is a community of software developers getting together to help one

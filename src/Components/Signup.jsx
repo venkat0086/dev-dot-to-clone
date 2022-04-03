@@ -8,10 +8,18 @@ import Footer from "./Footer";
 import { useState } from "react";
 import axios from "axios";
 import { Link, Navigate } from "react-router-dom";
+import { Hamburger } from "./Hamburger";
 
 const Signup = () => {
   const [details, setDetails] = useState({ email: "", password: "" });
   const [swtch, setSwtch] = useState(false);
+
+  const [mobileMenu, setmobileMenu] = useState(false);
+
+  const toggle = () => {
+    setmobileMenu(!mobileMenu);
+  };
+
   //console.log('details:', details);
 
   //const navigate = useNavigate();
@@ -45,8 +53,9 @@ const Signup = () => {
 
   return (
     <div>
-      <Navigation />
+      <Navigation openMenu={toggle} />
       <div className="s-container">
+        <Hamburger burgerMenu={mobileMenu} closeMenu={toggle} />
         <div className="welcome">
           <h1>Welcome to DEV Community</h1>
           <p className="comm">
