@@ -63,7 +63,7 @@ const Navigation = (props) => {
             <button className="i-btn" onClick={toggle}>
               <img
                 className="i-img"
-                src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
+                src="https://picsum.photos/200"
                 alt="user"
               />
             </button>
