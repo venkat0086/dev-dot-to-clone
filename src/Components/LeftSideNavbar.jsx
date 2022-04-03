@@ -58,30 +58,25 @@ export const LeftSideBarNavbar = (props) => {
                 Home
               </a>
             </li>
+
             <li>
-              <a href="/reading">
+              <Link to="/about">
                 <i>
-                  <FcReading />
+                  <FaDev />
                 </i>
-                Reading List
-              </a>
+                About
+              </Link>
             </li>
+
             <li>
-              <a href="/list">
+              <Link to="/contact">
                 <i>
-                  <FcTodoList />
+                  <FcBusinessContact />
                 </i>
-                list
-              </a>
+                Contact
+              </Link>
             </li>
-            <li>
-              <a href="/podcast">
-                <i>
-                  <AiFillAudio />
-                </i>
-                Podcasts
-              </a>
-            </li>
+
             <li>
               <Link to="/videos">
                 <i>
@@ -89,6 +84,15 @@ export const LeftSideBarNavbar = (props) => {
                 </i>
                 Videos
               </Link>
+            </li>
+
+            <li>
+              <a href="/podcast">
+                <i>
+                  <AiFillAudio />
+                </i>
+                Podcasts
+              </a>
             </li>
 
             <li>
@@ -140,12 +144,20 @@ export const LeftSideBarNavbar = (props) => {
                 </a>
               </li>
               <li>
-                <Link to="/about">
+                <a href="/reading">
                   <i>
-                    <FaDev />
+                    <FcReading />
                   </i>
-                  About
-                </Link>
+                  Reading List
+                </a>
+              </li>
+              <li>
+                <a href="/list">
+                  <i>
+                    <FcTodoList />
+                  </i>
+                  list
+                </a>
               </li>
               <li>
                 <a href="/privacy">
@@ -163,14 +175,6 @@ export const LeftSideBarNavbar = (props) => {
                   </i>
                   Terms of use
                 </a>
-              </li>
-              <li>
-                <Link to="/contact">
-                  <i>
-                    <FcBusinessContact />
-                  </i>
-                  Contact
-                </Link>
               </li>
             </div>
           </ul>
@@ -254,36 +258,40 @@ export const LeftSideBarNavbar = (props) => {
                       Home
                     </a>
                   </li>
+
                   <li>
-                    <a href="/reading">
+                    <Link to="/about">
                       <i>
-                        <FcReading />
+                        <FaDev />
                       </i>
-                      Reading List
-                    </a>
+                      About
+                    </Link>
                   </li>
+
                   <li>
-                    <a href="/list">
+                    <Link to="/contact">
                       <i>
-                        <FcTodoList />
+                        <FcBusinessContact />
                       </i>
-                      list
-                    </a>
+                      Contact
+                    </Link>
                   </li>
+
+                  <li>
+                    <Link to="/videos">
+                      <i>
+                        <FcVideoCall />
+                      </i>
+                      Videos
+                    </Link>
+                  </li>
+
                   <li>
                     <a href="/podcast">
                       <i>
                         <AiFillAudio />
                       </i>
                       Podcasts
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/videos">
-                      <i>
-                        <FcVideoCall />
-                      </i>
-                      Videos
                     </a>
                   </li>
 
@@ -337,11 +345,19 @@ export const LeftSideBarNavbar = (props) => {
                       </a>
                     </li>
                     <li>
-                      <a href="/about">
+                      <a href="/reading">
                         <i>
-                          <FaDev />
+                          <FcReading />
                         </i>
-                        About
+                        Reading List
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/list">
+                        <i>
+                          <FcTodoList />
+                        </i>
+                        list
                       </a>
                     </li>
                     <li>
@@ -359,14 +375,6 @@ export const LeftSideBarNavbar = (props) => {
                           <FcDisclaimer />
                         </i>
                         Terms of use
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/contact">
-                        <i>
-                          <FcBusinessContact />
-                        </i>
-                        Contact
                       </a>
                     </li>
                   </div>
