@@ -47,7 +47,7 @@ const Navigation = (props) => {
         </div>
 
         <div className="headerContainer__right">
-          <Link to={token ? `/login` : `/signup`}>
+          <Link to={token ? `/createpost` : `/signup`}>
             <button className="btn">
               {token ? "Create Post" : "Create account"}
             </button>
