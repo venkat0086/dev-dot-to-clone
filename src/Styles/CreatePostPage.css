@@ -1,0 +1,178 @@
+.CreatePostPage_Body{
+    background-color: #f5f5f5;
+}
+
+.CreatePostPage_MainDiv{
+    width: 75%;
+    height: 500px;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: flex;
+    /* margin-top: 100px; */
+}
+.CreatePostPage_MainDiv_FirstDiv{
+    background-color: #ffffff;
+    height: 100%;
+    width: 70%;
+    /* border: 1px solid gray; */
+    border-radius: 10px;
+}
+.CreatePostPage_MainDiv_FirstDiv_1{
+    height: 8%;
+    width: 90%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.CreatePostPage_btn{
+    width: 30%;
+    height: 100%;
+    margin-left: 25px;
+    font-weight: bold;
+    /* border: 1px solid gray; */
+    border-radius: 5px;
+}
+
+
+.CreatePostPage_textarea{
+    height: 15%;
+    width: 90%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.CreatePostPage_inputFirst{
+    height: 90%;
+    width: 80%;
+    margin-left: 3%;
+    border: none;
+
+}
+
+.CreatePostPage_inputFirst::placeholder { 
+    color: #525252;
+    font-size: 50px;
+    font-weight: bold;
+   }
+
+.CreatePostPage_inputtwo{
+    height: 10%;
+    width: 90%;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+.CreatePostPage_inputtwo_inputbox{
+    height: 90%;
+    width: 20%;
+    margin-left: 3%;
+    border: none;
+    
+}
+.CreatePostPage_inputtwo_inputbox::placeholder{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.CreatePostPage_textarea_Div{
+    height: 50%;
+    width: 90%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 5%;
+}
+.CreatePostPage_textarea_Div > textarea{
+    height: 90%;
+    width: 95%;
+    margin-left: 3%;
+    border: none;
+
+}
+.CreatePostPage_textarea_Div > textarea::placeholder{
+    font-size: 20px;
+    color: black;
+}
+.CreatePostPage_MainDiv_SecondDiv{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid greenyellow; */
+
+}
+._inside_div_CreatePostPage_MainDiv_SecondDiv{
+    height: 40%;
+    width: 100%;
+    /* border: 1px solid chocolate; */
+    margin-top: 30%;
+    margin-left: 5%;
+    color: #525252;
+}
+._inside_div_CreatePostPage_MainDiv_SecondDiv > h3{
+    color: black;
+}
+
+.low_Button_Div{
+    height: 100px;
+    width: 100%;
+    /* border: 1px solid greenyellow; */
+    display: flex;
+    align-items: center;
+}
+.inside_low_Button_Div{
+    /* border: 1px solid red; */
+    margin: auto;
+    width: 75%;
+    height: 70%;
+}
+.inside_low_Button_Div > div {
+    height: 100%;
+    width: 40%;
+    /* border: 1px solid greenyellow; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.Low_button_div_btn{
+    width: 100px;
+    padding: 3%;
+    background-color: #3b49df;
+    color: white;
+    border: 1px solid #3b49df;
+    border-radius: 5px;
+}
+.Low_button_div_btn:hover{
+    background-color: #02084f;
+}
+.Low_button_div_btnSecond{
+    width: 100px;
+    padding: 3%;
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin-left: 2%;
+    
+}
+.Low_button_div_btnSecond:hover{
+    background-color: #b8bbdb;
+}
+.Low_button_div_btnthird{
+    padding: 3%;
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin-left: 2%;
+}
+.Low_button_div_btnthird:hover{
+    background-color: #b8bbdb;
+
+}
