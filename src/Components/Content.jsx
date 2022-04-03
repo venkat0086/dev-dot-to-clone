@@ -68,7 +68,6 @@ export const Content = () => {
           </option>
 
           <option value="Week">Week</option>
-
           <option value="Month">Month</option>
           <option value="Year">Feed</option>
           <option value="Infinity">Infinity</option>
