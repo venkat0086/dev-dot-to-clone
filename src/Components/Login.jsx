@@ -11,12 +11,19 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "../Redux/action";
 import { Navigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Hamburger } from "./Hamburger";
 
 const Login = () => {
   const dispatch = useDispatch();
 
   const { token } = useSelector((state) => state, shallowEqual);
-  //console.log(token);
+  console.log(token);
+
+  const [mobileMenu, setmobileMenu] = useState(false);
+
+  const toggle = () => {
+    setmobileMenu(!mobileMenu);
+  };
 
   const [ldetails, setLdetails] = useState({ email: "", password: "" });
   const [lswtch, setLswtch] = useState(false);
@@ -51,8 +58,9 @@ const Login = () => {
 
   return (
     <div>
-      <Navigation />
+      <Navigation openMenu={toggle} />
       <div className="l-container">
+        <Hamburger burgerMenu={mobileMenu} closeMenu={toggle} />
         <div className="l-welcome">
           <h1>Welcome to DEV Community</h1>
           <p>

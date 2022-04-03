@@ -1,13 +1,22 @@
 import React from "react";
+import { useState } from "react";
 import "../Styles/contact.css";
 import Navigation from "./Navigate";
 import Footer from "./Footer";
+import { Hamburger } from "./Hamburger";
 
 export const Contact = () => {
+  const [mobileMenu, setmobileMenu] = useState(false);
+
+  const toggle = () => {
+    setmobileMenu(!mobileMenu);
+  };
+
   return (
     <>
-      <Navigation />
+      <Navigation openMenu={toggle} />
       <div className="contact">
+        <Hamburger burgerMenu={mobileMenu} closeMenu={toggle} />
         <h2>Contacts</h2>
         <p>DEV Community would love to hear from you!</p>
         <p>
