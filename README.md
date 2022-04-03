@@ -19,7 +19,7 @@ All the image and icon links have been taken from the main website (  https://de
 ## Snapshots 📷
 - Landing Page (Home Page):
   
-![Home Page](https://github.com/venkat0086/my-portfolio/blob/master/images/fraazo.png)
+![Home Page](https://github.com/venkat0086/my-portfolio/blob/master/images/dev-pro.png)
 
 <!-- - Category Page:
   
@@ -38,18 +38,14 @@ All the image and icon links have been taken from the main website (  https://de
 ![Checkout Page](https://user-images.githubusercontent.com/35700009/129468699-71e1556a-0c7c-48b3-a5cf-42b0135686e1.png) -->
 
 ### End Notes 📑
-In this project we were tried to achieve a near to perfect clone of the original website as much as possible with very limited knowledge of javascript & css. This entire journey of has given us experiences and we have learned lots of things by applying to the real website and it gave us a lot of confidence.
-
-### Limitations:
-All pages are not responsive yet , those pages are might not be properly visible on small screen devices.
-(Recomended Resolution: 1366 x 768 )
+In this project we were tried to achieve a near to perfect clone of the original website as much as possible with very limited knowledge of React & Redux. This entire journey of has given us experiences and we have learned lots of things by applying to the real website and it gave us a lot of confidence.
 
 ## Team Members and Contributors 😇 :
 
 - 👤 [Venkat R](https://github.com/venkat0086)
   
-- 👤 [Sanket Patil](https://github.com/sanketpatil05)
+- 👤 [Saravanan M](https://github.com/MSarvan)
   
-- 👤 [Aniket Chimurkar](https://github.com/Aniket-Chimurkar)
+- 👤 [Kamlesh Jadhav](https://github.com/Kjadhav4393)
   
-- 👤 [Pushpendra](https://github.com/PushpendraKPal)
+- 👤 [Gourab Mishra](https://github.com/Gourav1221)
