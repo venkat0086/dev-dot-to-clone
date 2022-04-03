@@ -1,7 +1,7 @@
 # Dev.to (Clone)
 Project: make a clone of https://dev.to/ site
 
-*DEV is a community of software developers getting together to help one another out.  *
+*DEV is a community of software developers getting together to help one another out and A constructive and inclusive social network for software developers.*
 
 &nbsp;&nbsp;&nbsp;&#160;In this project we have tried to make a look alike clone of Dev Website. With our efforts and the technology stack, that we have learned till now in Unit-5 in the masai school, we were able to clone the front end with same looking & features. <br><br>
 
